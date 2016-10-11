@@ -1,0 +1,44 @@
+# Compiled files
+*.pyc
+
+# vim files
+.*.sw*
+.swp
+
+# Other Python Specific
+*.egg-info
+*.egg
+.eggs
+*.EGG
+*.EGG-INFO
+bin
+build
+develop-eggs
+downloads
+eggs
+parts
+dist
+.installed.cfg
+
+# virtstrap
+quickactivate
+.vs.env
+.virtstrap.log
+
+# Misc
+*.bak
+*.tmp
+
+# Ignore ropeproject shiz
+.ropeproject
+
+# Orig files are annoying
+*.orig
+
+# Ignore sensitive files
+*.pem
+*.key
+*.crt
+
+# Terraform stuff
+.terraform
