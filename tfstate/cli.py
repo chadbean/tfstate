@@ -2,9 +2,11 @@ import click
 import json
 from . import constants
 from . import convenience
+import tfstate
 
 
 @click.command()
+@click.version_option(version=tfstate.__version__)
 @click.option('--state-uri', envvar=constants.STATE_URI_ENV_VAR, required=True)
 @click.option('--cache-dir', default=constants.DEFAULT_CACHE_DIR,
               envvar=constants.CACHE_DIR_ENV_VAR, required=True)

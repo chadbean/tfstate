@@ -20,6 +20,10 @@ Here are the highlights:
 ## [Unreleased]
 ### Added
 
+## [0.3.1] - 2016-10-11
+### Added
+- `--version` flag to the CLI
+
 ## [0.3.0] - 2016-10-11
 ### Added
 - Support for version 0.7.x of terraform
@@ -32,5 +36,6 @@ Here are the highlights:
 ### Added
 - Initial public release. YAY!
 
-[0.3.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.3.0...HEAD
-[0.2.0]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.2.0...v0.3.0
+[0.3.1]: https://github.com/virtru/tfstate/compare/v0.3.1...HEAD
+[0.3.0]: https://github.com/virtru/tfstate/compare/v0.3.0...v0.3.0
+[0.2.0]: https://github.com/virtru/tfstate/compare/v0.2.0...v0.3.0
