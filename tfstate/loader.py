@@ -23,7 +23,7 @@ class TerraformLoader(object):
 
         loader.ensure_cache_dir_exists()
         loader.ensure_cache_dir_for_state_uri_exists()
-
+        print('test!!!')
         return loader
 
 
@@ -54,6 +54,10 @@ class TerraformLoader(object):
         if parsed_uri.scheme == 'file':
             return self._load_file_state(parsed_uri.path, module=module)
         elif parsed_uri.scheme == 's3':
+            # Warm up AWS meta data API with initial GET call
+            if utils.on_aws():
+                utils.ping_aws_meta_data_api()
+    
             return self._load_s3_state(parsed_uri.netloc, parsed_uri.path,
                                        module=module)
         else:

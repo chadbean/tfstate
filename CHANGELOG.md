@@ -20,6 +20,11 @@ Here are the highlights:
 ## [Unreleased]
 ### Added
 
+## [0.3.2] - 2016-10-26
+### Added
+- Functionality to test if running from AWS
+- Ability to "warm up" (via GET request) the AWS meta data API
+
 ## [0.3.1] - 2016-10-11
 ### Added
 - `--version` flag to the CLI
