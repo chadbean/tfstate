@@ -23,7 +23,6 @@ class TerraformLoader(object):
 
         loader.ensure_cache_dir_exists()
         loader.ensure_cache_dir_for_state_uri_exists()
-        print('test!!!')
         return loader
 
 
