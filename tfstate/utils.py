@@ -20,3 +20,4 @@ def ping_aws_meta_data_api():
     try:
         urllib2.urlopen(url, timeout = 10)
     except Exception as e: print(e)
+    
