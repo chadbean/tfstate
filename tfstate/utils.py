@@ -11,19 +11,6 @@ def mkdir_p(path):
         else:
             raise
 
-# We call this to see if we are an AWS EC2 instance
-# or on another machine (e.g. local).
-def on_aws():
-    ip = '169.254.169.254'
-    timeout = 0.1
-    try:
-        socket.setdefaulttimeout(timeout)
-        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((ip, 80))
-        return True
-    except Exception as e:
-        print(e.message)
-        return False
-
 # This is used to "warm up" the AWS meta data API.
 # We were seeing > 5 secs. on the first call after
 # starting an instance. Successive calls were
