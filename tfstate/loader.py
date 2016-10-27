@@ -56,7 +56,7 @@ class TerraformLoader(object):
         elif parsed_uri.scheme == 's3':
             # Warm up AWS meta data API with initial GET call
             # @SEE WS-4580
-            utils.ping_aws_meta_data_api()
+            utils.warm_up_http_request()
     
             return self._load_s3_state(parsed_uri.netloc, parsed_uri.path,
                                        module=module)

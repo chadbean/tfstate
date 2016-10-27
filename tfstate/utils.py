@@ -14,8 +14,8 @@ def mkdir_p(path):
 # We were seeing > 5 secs. on the first call after
 # starting an instance. Successive calls were
 # returned _much_ faster.
-def ping_aws_meta_data_api():
-    url = 'http://169.254.169.254/latest/meta-data/'
+def warm_up_http_request():
+    url = 'http://www.virtru.com/'
     try:
         urllib2.urlopen(url, timeout = 10)
     except Exception as e: print(e)
